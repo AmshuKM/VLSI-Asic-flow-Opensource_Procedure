@@ -1,0 +1,8 @@
+# write the design file in .v or .sv formats
+# write the testbench and indlude the below lines in it
+initial begin
+$dumpfile("designTB.vdc");
+$dumpvars(1,design);
+end
+
+#  This will create .vdc file for simulation
