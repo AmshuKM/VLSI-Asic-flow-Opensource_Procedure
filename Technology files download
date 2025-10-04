@@ -1,0 +1,6 @@
+# Go to home directory in the terminal
+git clone https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git
+cd ~/OpenROAD-flow-scripts/tools/OpenROAD/test/
+# You can find all the tech files here (for learning purposes)
+pwd # To get the path of your current directory
+# You can navigate through the lef and lib folders to use .lef .lib paths of the prefered technology ,required in the asic flow
