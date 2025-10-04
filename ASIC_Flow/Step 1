@@ -1,3 +1,5 @@
+# Once installation procedure is done,
+
 # write the design file in .v or .sv formats
 
 # write the testbench and indlude the below lines in it
