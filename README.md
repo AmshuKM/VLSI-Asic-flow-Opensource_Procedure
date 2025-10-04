@@ -3,3 +3,7 @@ Step-by-step documented flow for performing ASIC physical design using OpenROAD.
 
 This is a easy to follow procedure , knowing a basics of linux is recommended.
 I recommend maintaining different directories for different designs and also copying the .lib .lef files to a different directory for ease of access.
+
+## Procedure
+I recommend you to do the OpenROAD installation and the technology files download first as it is a one time thing.
+Then for every design you can follow the asic flow procedure.
