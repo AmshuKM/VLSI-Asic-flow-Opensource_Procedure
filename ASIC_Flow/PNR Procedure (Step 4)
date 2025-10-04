@@ -1,0 +1,6 @@
+# Go to your design.v folder in terminal 
+openroad   # To open OpenROAD application
+read_lef ~/path/to/tech.lef   # Use the tech.lef file of the Technology you are using
+read_lef ~/path/to/cell_lib.lef   # Use the cell_lib.lef file of the Technology you are using
+read_verilog design_synth.v
+link_design module_name
