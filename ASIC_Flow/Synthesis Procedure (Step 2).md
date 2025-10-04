@@ -1,5 +1,6 @@
 # Go to your design.v folder in terminal 
 yosys # To open Yosys terminal for synthesis
+
 # Phase A
 read_verilog design.v   # Use your RTL design file name
 hierarchy -check -top module_name   # Use the module name used in the verilog program
