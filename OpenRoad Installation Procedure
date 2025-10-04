@@ -11,3 +11,6 @@ cd   # To go to home Directory
 openroad     # To check if openroad has installed correctly
 # you can see openroad is install and will be inside the application
 exit   # To exit openroad
+sudo apt install gtkwave # To view Waveforms
+sudo apt install graphviz # to create .dot file
+sudo apt install verilator # Used for linting
