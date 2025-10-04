@@ -10,6 +10,12 @@ Then for every design you can follow the asic flow procedure.
 
 If you are confident in using linux , you can use tcl scripts or .ys scripts for yosys as well.
 
+## 🧾 Acknowledgment
+
+This work builds upon the [OpenROAD Project](https://github.com/The-OpenROAD-Project/OpenROAD),  
+an open-source initiative for autonomous, open, and reproducible digital layout generation.  
+All tool usage and commands in this repository reference the official OpenROAD toolchain under the BSD 3-Clause License.
+Portions of this workflow are derived from examples provided by the OpenROAD Project (BSD 3-Clause License).
 
 ### Regards
 
