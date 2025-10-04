@@ -13,13 +13,14 @@ initialize_floorplan -die_area "0 0 100 100" \        # You can change these as 
 # nangate45 - FreePDK45_38x28_10R_NP_162NW_34O 
 # sky130hd - sky130A_272x46_5M1T_LP_MIM_11D
 place_pins -hor_layers {metal3} -ver_layers {metal2 metal4}
-# PLacement
+# If you find tracks error you have to create tracks (Usually available in Techology Folder) and execute the above line again
+# Placement
 global_placement -density 0.7
 detailed_placement
 # CTS-Clock Tree Synthesis
 create_clock -period 10 [get_ports clk]   # Change this according to your requirement 
 clock_tree_synthesis
-# Rounting
+# Routing
 global_route
 detailed_route
 report_checks -path_delay min_max > post_pnr_timing.rpt
