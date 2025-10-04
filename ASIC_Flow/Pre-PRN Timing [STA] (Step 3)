@@ -1,6 +1,6 @@
 # Go to your design.v folder in terminal 
 sta   # To open STA application
-read_liberty ~/path/to/typical.lib # Use the path to typical/stdcell .lib file
+read_liberty ~/path/to/typical.lib # Use the path to typical or stdcell .lib file
 read_verilog design_synth.v   # Use the synthesised .v file
 link_design module_name
 read_sdc constraints.sdc   # You can use the pre written constraints file or directly write the constraints
