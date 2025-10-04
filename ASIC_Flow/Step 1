@@ -1,4 +1,5 @@
 # write the design file in .v or .sv formats
+
 # write the testbench and indlude the below lines in it
 initial begin
 $dumpfile("designTB.vdc");
@@ -6,3 +7,8 @@ $dumpvars(1,design);
 end
 
 #  This will create .vdc file for simulation
+# Go to your design.v folder in terminal
+
+iverilog -o design design.v design_TB.v
+vvp design
+gtkwave design.vdc  # To view the simulation
