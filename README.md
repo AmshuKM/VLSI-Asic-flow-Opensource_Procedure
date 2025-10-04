@@ -13,5 +13,5 @@ If you are confident in using linux , you can use tcl scripts or .ys scripts for
 
 ### Regards
 
-If there is anything that I need to change or improve please let me know
+If there is anything that I need to change or improve please let me know.
 Contributions are welcome!
