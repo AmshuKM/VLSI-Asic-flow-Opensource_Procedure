@@ -8,6 +8,10 @@ read_liberty ~/path/to/typical.lib # Use the path to typical or stdcell .lib fil
 initialize_floorplan -die_area "0 0 100 100" \        # You can change these as your requirements
                      -core_area "10 10 90 90" \
                      -site <site_name>
+# site_names for some technology (can find online if these don't work)
+# asap7sc7p5t - ASAP7_21x54_10M_FF_42CPP_18FP
+# nangate45 - FreePDK45_38x28_10R_NP_162NW_34O 
+# sky130hd - sky130A_272x46_5M1T_LP_MIM_11D
 place_pins -hor_layers {metal3} -ver_layers {metal2 metal4}
 # PLacement
 global_placement -density 0.7
