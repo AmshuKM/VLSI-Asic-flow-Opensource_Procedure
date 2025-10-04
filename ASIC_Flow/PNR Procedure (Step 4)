@@ -4,3 +4,23 @@ read_lef ~/path/to/tech.lef   # Use the tech.lef file of the Technology you are 
 read_lef ~/path/to/cell_lib.lef   # Use the cell_lib.lef file of the Technology you are using
 read_verilog design_synth.v
 link_design module_name
+read_liberty ~/path/to/typical.lib # Use the path to typical or stdcell .lib file
+initialize_floorplan -die_area "0 0 100 100" \        # You can change these as your requirements
+                     -core_area "10 10 90 90" \
+                     -site <site_name>
+place_pins -hor_layers {metal3} -ver_layers {metal2 metal4}
+# PLacement
+global_placement -density 0.7
+detailed_placement
+# CTS-Clock Tree Synthesis
+create_clock -period 10 [get_ports clk]   # Change this according to your requirement 
+clock_tree_synthesis
+# Rounting
+global_route
+detailed_route
+report_checks -path_delay min_max > post_pnr_timing.rpt
+report_tns
+report_wns
+write_def design_pnr.def
+write_verilog design_pnr.v
+write_sdf design_pnr.sdf
