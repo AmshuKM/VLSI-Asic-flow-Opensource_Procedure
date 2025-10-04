@@ -7,3 +7,11 @@ I recommend maintaining different directories for different designs and also cop
 ## Procedure
 I recommend you to do the OpenROAD installation and the technology files download first as it is a one time thing.
 Then for every design you can follow the asic flow procedure.
+
+
+
+
+### Regards
+
+If there is anything that I need to change or improve please let me know
+Contributions are welcome!
