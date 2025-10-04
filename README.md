@@ -8,7 +8,7 @@ I recommend maintaining different directories for different designs and also cop
 I recommend you to do the OpenROAD installation and the technology files download first as it is a one time thing.
 Then for every design you can follow the asic flow procedure.
 
-
+If you are confident in using linux , you can use tcl scripts or .ys scripts for yosys as well.
 
 
 ### Regards
