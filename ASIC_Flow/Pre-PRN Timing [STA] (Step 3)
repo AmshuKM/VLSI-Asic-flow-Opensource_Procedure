@@ -1,1 +1,3 @@
-jbj
+# Go to your design.v folder in terminal 
+sta   # To open STA application
+read_liberty 
