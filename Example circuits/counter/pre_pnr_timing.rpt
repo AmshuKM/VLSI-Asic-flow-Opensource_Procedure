@@ -1,0 +1,56 @@
+Startpoint: _24_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _24_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock clk (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+            0.000    0.000    0.000 ^ _24_/CK (DFF_X1)
+   1.700    0.010    0.062    0.062 ^ _24_/QN (DFF_X1)
+            0.010    0.000    0.062 ^ _14_/A (INV_X1)
+   1.413    0.004    0.007    0.069 v _14_/ZN (INV_X1)
+            0.004    0.000    0.069 v _15_/A1 (NOR2_X1)
+   1.140    0.013    0.018    0.087 ^ _15_/ZN (NOR2_X1)
+            0.013    0.000    0.087 ^ _24_/D (DFF_X1)
+                              0.087   data arrival time
+
+            0.000    0.000    0.000   clock clk (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     0.000    0.000   clock reconvergence pessimism
+                              0.000 ^ _24_/CK (DFF_X1)
+                     0.007    0.007   library hold time
+                              0.007   data required time
+---------------------------------------------------------------------------
+                              0.007   data required time
+                             -0.087   data arrival time
+---------------------------------------------------------------------------
+                              0.080   slack (MET)
+
+
+Startpoint: _25_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: out[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock clk (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+            0.000    0.000    0.000 ^ _25_/CK (DFF_X1)
+   5.871    0.017    0.094    0.094 ^ _25_/Q (DFF_X1)
+            0.017    0.000    0.094 ^ out[1] (out)
+                              0.094   data arrival time
+
+            0.000   10.000   10.000   clock clk (rise edge)
+                     0.000   10.000   clock network delay (ideal)
+                     0.000   10.000   clock reconvergence pessimism
+                    -2.000    8.000   output external delay
+                              8.000   data required time
+---------------------------------------------------------------------------
+                              8.000   data required time
+                             -0.094   data arrival time
+---------------------------------------------------------------------------
+                              7.906   slack (MET)
+
