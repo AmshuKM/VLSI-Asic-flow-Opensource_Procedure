@@ -1,4 +1,6 @@
 # In terminal , in your circuit directory
 openroad -gui
 # In the openroad window typw thw following in TCL command line
-read_lef
+read_lef ~/path/to/tech.lef   # Use the tech.lef file of the Technology you are using
+read_lef ~/path/to/cell_lib.lef   # Use the cell_lib.lef file of the Technology you are using
+read_def ~/path/to/your/design.def   # Use your .def file created during PNR
