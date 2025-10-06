@@ -1,7 +1,7 @@
 # To install OpenROAD , First install WSL(Ubuntu) if you are using windows , or if you are directly using Ubuntu it works too.
 git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git
 cd OpenROAD
-sudo ./etc/DependencyInstaller.sh      # This will take quite some time
+sudo ./etc/DependencyInstaller.sh -all     # This will take quite some time
 mkdir build
 cd build
 cmake ..
