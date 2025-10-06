@@ -1,0 +1,4 @@
+# In terminal , in your circuit directory
+openroad -gui
+# In the openroad window typw thw following in TCL command line
+read_lef
