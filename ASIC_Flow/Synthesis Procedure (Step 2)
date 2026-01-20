@@ -2,7 +2,7 @@
 yosys # To open Yosys terminal for synthesis
 
 # Phase A
-read_verilog design.v   # Use your RTL design file name
+read_verilog design.v   # Use your RTL design file name (All the design Files)
 hierarchy -check -top module_name   # Use the module name used in the verilog program
 proc
 opt -fast
@@ -18,7 +18,7 @@ clean
 stat -liberty ~/path/to/tech.lib    # Use the same .lib file
 write_verilog -noattr design_synth.v   # This is the synthesised netlist (can use outputfiles/design_synth.v if required)
 write_json design.json
-show -format dot -prefix design_synth module_name   # creates design.dot file used to visualize
+show -format dot -prefix design_synth module_name   # creates design.dot file used to visualize (Use all the Module names)
 exit # To exit yosys
 dot -Tsvg design.dot -o design.svg   # Make sure .dot file is the right name
 open design.svg   # Now you an visualise the synthesised circuit
