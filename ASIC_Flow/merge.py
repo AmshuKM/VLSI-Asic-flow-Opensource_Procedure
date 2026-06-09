@@ -1,6 +1,6 @@
-# merge.py  --  build a complete GDS from a routed DEF + sky130 cell GDS
-# Run headless with:   klayout -b -r merge.py
-# Run from the folder that contains design_pnr.def (or make in_def absolute).
+# merge.py  --  build a complete GDS from a routed DEF + technology cell GDS
+
+# Run from the folder that contains .def .
 
 import pya
 
@@ -9,7 +9,7 @@ tech_lef = "/path/to/.lef"
 cell_lef = "path/to/std_cell.lef"
 cell_gds = "path/to/technology.gds"
 in_def   = "path/to/.def"
-out_gds  = "counter.gds"
+out_gds  = "design.gds"
 # -------------------------------------------------
 
 layout = pya.Layout()
