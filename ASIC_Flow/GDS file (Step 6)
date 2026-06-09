@@ -1,0 +1,5 @@
+# In your command line, in the .gd folder
+
+klayout -b -r merge.py
+
+klayout design.gds       # To view the gds file
