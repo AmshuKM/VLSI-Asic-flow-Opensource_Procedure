@@ -5,27 +5,50 @@ read_lef ~/path/to/cell_lib.lef   # Use the cell_lib.lef file of the Technology 
 read_verilog design_synth.v
 link_design module_name
 read_liberty ~/path/to/typical.lib # Use the path to typical or stdcell .lib file
-initialize_floorplan -die_area "0 0 100 100" \        # You can change these as your requirements
-                     -core_area "10 10 90 90" \
+
+initialize_floorplan -utilization 50 \    # You can change ths as your requirement 
+                     -aspect_ratio 1.0 \
+                     -core_space 2.0 \
                      -site <site_name>
 # site_names for some technology (can find online if these don't work)
 # asap7sc7p5t - ASAP7_21x54_10M_FF_42CPP_18FP
 # nangate45 - FreePDK45_38x28_10R_NP_162NW_34O 
 # sky130hd - sky130A_272x46_5M1T_LP_MIM_11D
+
 place_pins -hor_layers {metal3} -ver_layers {metal2 metal4}
+
 # If you find tracks error you have to create tracks (Usually available in Techology Folder) and execute the above line again
+
+set_wire_rc -signal -layer metal3
+set_wire_rc -clock  -layer metal5
+
 # Placement
-global_placement -density 0.7
+gglobal_placement -density 0.7
+estimate_parasitics -placement
+repair_design
 detailed_placement
+check_placement
+
 # CTS-Clock Tree Synthesis
-create_clock -period 10 [get_ports clk]   # Change this according to your requirement 
 clock_tree_synthesis
+detailed_placement          ;# legalize the inserted clock buffers
+estimate_parasitics -placement
+repair_timing
+
 # Routing
 global_route
-detailed_route
-report_checks -path_delay min_max > post_pnr_timing.rpt
+repair_antennas
+filler_placement FILLCELL_X1   ;# fillers AFTER antenna repair
+detailed_route -output_drc route_drc.rpt
+
+restimate_parasitics -global_routing
+report_checks -path_delay min_max -digits 3 > post_pnr_timing.rpt
 report_tns
 report_wns
+report_power
+
+# ---------- Output files ----------
 write_def design_pnr.def
 write_verilog design_pnr.v
 write_sdf design_pnr.sdf
+#write_gds counter.gds
