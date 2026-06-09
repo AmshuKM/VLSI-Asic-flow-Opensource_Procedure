@@ -51,4 +51,4 @@ report_power
 write_def design_pnr.def
 write_verilog design_pnr.v
 write_sdf design_pnr.sdf
-#write_gds counter.gds
+# write_gds counter.gds      # if this does not work do step 6 instead
