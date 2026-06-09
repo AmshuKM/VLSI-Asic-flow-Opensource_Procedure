@@ -5,10 +5,10 @@
 import pya
 
 # ---- inputs (edit only if your paths change) ----
-tech_lef = "/path/to/.lef"
-cell_lef = "path/to/std_cell.lef"
-cell_gds = "path/to/technology.gds"
-in_def   = "path/to/.def"
+tech_lef = "/path/to/.lef"                  #  Use the tech.lef file of the Technology you are using
+cell_lef = "path/to/std_cell.lef"           # Use the cell.lef file of the Technology you are using
+cell_gds = "path/to/technology.gds"         # Use the .gds file of the Technology you are using
+in_def   = "path/to/.def"`                  # Use the .def file created from Step 4
 out_gds  = "design.gds"
 # -------------------------------------------------
 
